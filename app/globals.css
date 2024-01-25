@@ -2,26 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Inknut_Antiqua';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../public/fonts/Inknut_Antiqua/InknutAntiqua-Regular.ttf') format('truetype');
+}
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-main: #EEF0F2;
+  --background-secondary: #1C1C1C;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+h1, p {
+  font-family: 'Inknut_Antiqua';
+  font-weight: 100;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.mainHeader {
+  font-size: 5rem;
 }
