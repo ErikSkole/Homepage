@@ -9,9 +9,14 @@
   src: url('../public/fonts/Inknut_Antiqua/InknutAntiqua-Regular.ttf') format('truetype');
 }
 
+
 :root {
   --background-main: #EEF0F2;
   --background-secondary: #1C1C1C;
+}
+
+body {
+  background-color: var(--background-main);
 }
 
 h1, p {
@@ -21,4 +26,21 @@ h1, p {
 
 .mainHeader {
   font-size: 5rem;
+}
+
+.lowerPage {
+  background-color: var(--background-secondary);
+  width: 100%;
+  height: 100rem;
+}
+
+.lowerPage::before {
+  content: '';
+  background-color: var(--background-main);
+  width: 100%;
+  height: 100rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
