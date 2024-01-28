@@ -12,6 +12,7 @@
 :root {
   --background-main: #EEF0F2;
   --background-secondary: #1C1C1C;
+  --temp-picture: #D9D9D9;
 }
 
 body {
@@ -28,11 +29,15 @@ h1, h2, h3, p {
 /* Main page styling */
 
 .mainHeader {
-  font-size: 5rem;
+  font-size: 7.5rem;
 }
 
 .mainHeaderContainer {
   height: 60vh;
+}
+
+.mainUnder {
+  font-size: 2rem;
 }
 
 /* lowerPage refers to the black screen you scroll down to with all links and content */
@@ -41,7 +46,8 @@ h1, h2, h3, p {
   background-color: var(--background-secondary);
   position: relative;
   width: 100%;
-  height: 60rem;
+  height: auto;
+  padding-bottom: 10rem;
 }
 
 .lowerPage::before {
@@ -65,6 +71,26 @@ h1, h2, h3, p {
   background-image: url(../public/arrow-down.svg);
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.tempContent {
+  color: var(--background-main);
+}
+
+.tempHeader {
+  font-size: 3rem;
+}
+
+.tempImg {
+  height: 17.5rem;
+  width: 22.5rem;
+  background-color: var(--temp-picture);
+}
+
+.lineObject {
+  background-color: var(--temp-picture);
+  width: 18rem;
+  height: 1px;
 }
 
 
