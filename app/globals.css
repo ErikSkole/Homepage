@@ -28,19 +28,36 @@ h1, p {
   font-size: 5rem;
 }
 
+.mainHeaderContainer {
+  height: 60vh;
+}
+
 .lowerPage {
   background-color: var(--background-secondary);
+  position: relative;
   width: 100%;
-  height: 100rem;
+  height: 60rem;
 }
 
 .lowerPage::before {
   content: '';
-  background-color: var(--background-main);
-  width: 100%;
-  height: 100rem;
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
+  width: 100%;
+  height: 10rem;
+  top: -10rem;
+  background-color: var(--background-secondary);
+  mask-image: url(../public/triangle.svg);
+  transform: rotate(.5turn);
+}
+
+.arrowLower {
+  position: absolute;
+  top: -6.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3.5rem;
+  height: 3.5rem;
+  background-image: url(../public/arrow-down.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
