@@ -9,7 +9,6 @@
   src: url('../public/fonts/Inknut_Antiqua/InknutAntiqua-Regular.ttf') format('truetype');
 }
 
-
 :root {
   --background-main: #EEF0F2;
   --background-secondary: #1C1C1C;
@@ -19,10 +18,14 @@ body {
   background-color: var(--background-main);
 }
 
-h1, p {
+h1, h2, h3, p {
   font-family: 'Inknut_Antiqua';
   font-weight: 100;
 }
+
+
+
+/* Main page styling */
 
 .mainHeader {
   font-size: 5rem;
@@ -31,6 +34,8 @@ h1, p {
 .mainHeaderContainer {
   height: 60vh;
 }
+
+/* lowerPage refers to the black screen you scroll down to with all links and content */
 
 .lowerPage {
   background-color: var(--background-secondary);
@@ -60,4 +65,27 @@ h1, p {
   background-image: url(../public/arrow-down.svg);
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+
+
+/* Projects page styling */
+
+.projectsHeaderContainer {
+  height: 105vh;
+  background-color: var(--background-secondary);
+}
+
+.projectsHeaderContainer::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 10rem;
+  top: 105%;
+  background-color: var(--background-secondary);
+  mask-image: url(../public/triangle.svg);
+}
+
+.projectsHeader {
+  color: var(--background-main);
 }
