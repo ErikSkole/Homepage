@@ -115,3 +115,7 @@ h1, h2, h3, p {
 .projectsHeader {
   color: var(--background-main);
 }
+
+.lowerProjects {
+  min-height: 55rem;
+}
