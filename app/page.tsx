@@ -1,4 +1,13 @@
+'use client'
 import TempLowerPage from "./components/tempComponents/tempLowerPage";
+import Image from 'next/image';
+
+const isBrowser = () => typeof window !== 'undefined'; //The approach recommended by Next.js
+
+function scrollToTop() {
+    if (!isBrowser()) return;
+    window.scrollTo({ top: 900, behavior: 'smooth' });
+}
 
 export default function Home() {
   return (
@@ -8,8 +17,14 @@ export default function Home() {
         <p className='mainUnder flex'>This is my website</p>
       </div>
       <div className="lowerPage flex items-start justify-evenly pt-80">
-        <div className="arrowLower">
-        </div>
+        <Image 
+        src="/arrow-down.svg" 
+        alt="arrow" 
+        width={40}
+        height={40}
+        onClick={scrollToTop} 
+        className="arrowLower"
+        />
         <div className="rightCol flex flex-col">
           <TempLowerPage />
           <TempLowerPage />
